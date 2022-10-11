@@ -1,14 +1,16 @@
-# from PIL import Image
-# import pytesseract
-# import cv2
-# img=cv2.imread('test.png')
-# tex=pytesseract.image_to_string(Image.open("test.png"),lang="vie")
-# print(pytesseract.image_to_string(Image.open("test.png"),lang="vie"))
-# cv2.namedWindow("Input image")
-# cv2.imshow("input image",img)
-# cv2.waitKey(0)
-# cv2.destroyWindow("test")
-# cv2.destroyWindow("main")
+from PIL import Image
+import pytesseract
+import cv2
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\ARJUN B\AppData\Local\Tesseract-OCR\tesseract.exe'
+img=cv2.imread('images.png')
+tex=pytesseract.image_to_string(Image.open("images.png"),lang="Malayalam")
+print(pytesseract.image_to_string(Image.open("images.png"),lang="eng"))
+cv2.namedWindow("Input image")
+cv2.imshow("input image",img)
+cv2.waitKey(0)
+cv2.destroyWindow("test")
+cv2.destroyWindow("main")
+
 
 
 
